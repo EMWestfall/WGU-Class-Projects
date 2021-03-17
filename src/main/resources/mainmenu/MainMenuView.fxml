@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainmenu.MainMenuController">
+   <top>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefWidth="139.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleCustomersButton" prefHeight="200.0" prefWidth="200.0" styleClass="userButton" text="Customers">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleAppointmentsButton" prefHeight="200.0" prefWidth="200.0" styleClass="userButton" text="My Appointments" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleReportsButton" prefHeight="200.0" prefWidth="200.0" styleClass="userButton" text="Reports" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
