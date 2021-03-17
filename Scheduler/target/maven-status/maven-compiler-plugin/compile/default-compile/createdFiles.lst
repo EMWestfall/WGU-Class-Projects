@@ -1,0 +1,9 @@
+customer\CustomerController.class
+appointment\AppointmentController.class
+mainmenu\MainMenuController.class
+scheduler\App.class
+scenecontroller\SceneController.class
+login\LoginController.class
+alerts\AlertsController.class
+user\UserDAOImp.class
+user\User.class
