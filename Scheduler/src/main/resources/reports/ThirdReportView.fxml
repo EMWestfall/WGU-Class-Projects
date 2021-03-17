@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reports.ThirdReportController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <bottom>
+      <ButtonBar BorderPane.alignment="CENTER">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#handleBack" text="Back" />
+         </buttons>
+         <padding>
+            <Insets bottom="20.0" right="15.0" top="20.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+   <top>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefWidth="329.0" text="Report #3" textAlignment="CENTER" textFill="#999999" GridPane.columnSpan="3" GridPane.rowSpan="2">
+               <font>
+                  <Font name="Arial" size="48.0" />
+               </font>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="127.0" prefWidth="74.0" text="User:" textAlignment="CENTER" textFill="#999999" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="userChoice" onAction="#handleUserChoice" prefWidth="150.0" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" contentDisplay="TOP" prefWidth="329.0" text="Appointments by User" textAlignment="CENTER" textFill="#999999" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <TableView fx:id="appointmentsTable" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="apptId" prefWidth="43.20001220703125" text="ID" />
+            <TableColumn fx:id="apptTitle" prefWidth="120.0" text="Title" />
+            <TableColumn fx:id="apptDescription" minWidth="0.0" prefWidth="180.0" text="Description" />
+            <TableColumn fx:id="apptLocation" prefWidth="159.99993896484375" text="Location" />
+            <TableColumn fx:id="apptType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="apptStart" prefWidth="120.0" text="Start" />
+            <TableColumn fx:id="apptEnd" prefWidth="120.0" text="End" />
+            <TableColumn fx:id="apptCustomerId" prefWidth="75.0" text="Customer" />
+            <TableColumn fx:id="apptContact" prefWidth="309.6000289916992" text="Contact" />
+         </columns>
+      </TableView>
+   </center>
+</BorderPane>
